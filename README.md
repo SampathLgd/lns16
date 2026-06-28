@@ -72,15 +72,15 @@ lns_project/
 ## Quick Start
 
 ```bash
-git clone https://github.com/<your-username>/lns16-dnn
-cd lns16-dnn
 pip install -r requirements.txt
 
 # Verify core math (no GPU needed):
 python validate_core.py
 
 # Full pipeline:
-python experiments/train.py        # ~100 epochs, saves checkpoints/resnet20_fp32.pth
+python experiments/train.py
+  # The dataset will be downloaded automatically on first run
+  # ~100 epochs, saves checkpoints/resnet20_fp32.pth
 python experiments/benchmark.py   # evaluates FP32 / FP16 / LNS16
 
 # Demo (no training required):
